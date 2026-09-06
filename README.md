@@ -4,9 +4,7 @@ Official implementation of **Edit-VAR**, a training-free and inversion-free vide
 
 ## 🔍 Method Overview
 
-Edit-VAR performs editing through a two-phase coarse-to-fine generation process. In Phase 1, the source video is encoded into discrete token indices, while source-conditioned token probabilities and cross-attention signals are cached. In Phase 2, the source and target distributions are compared to determine whether each token should be preserved or regenerated. The attention signal produces token-wise preservation strengths, and the scale schedule adjusts these strengths over the autoregressive hierarchy. Residual-guided token pruning is provided as an optional inference acceleration mechanism.
-
-At late scales, Edit-VAR stops the source-conditioned Transformer forward and replaces the dynamic source likelihood with a fixed preservation bias. This relaxes source constraints and allows the target-conditioned model to regenerate fine details more freely.
+Edit-VAR performs editing through a two-phase coarse-to-fine generation process. In Phase 1, the source video is encoded into discrete token indices, while source-conditioned token probabilities and cross-attention signals are cached. In Phase 2, the source and target distributions are compared to determine whether each token should be preserved or regenerated. The attention signal produces token-wise preservation strengths, and the scale schedule adjusts these strengths over the autoregressive hierarchy; at late scales, dynamic source likelihoods are replaced by a fixed preservation bias, relaxing source constraints so that the target-conditioned model can regenerate fine details more freely. Residual-guided token pruning is provided as an optional inference acceleration mechanism.
 
 ## 🗂️ Repository Structure
 
