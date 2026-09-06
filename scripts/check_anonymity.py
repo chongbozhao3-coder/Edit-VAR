@@ -26,6 +26,10 @@ def main():
         relative = path.relative_to(ROOT)
         if relative == Path("scripts/check_anonymity.py"):
             continue
+        # Git metadata belongs to the local checkout and is never part of a
+        # GitHub working tree or source archive produced with `git archive`.
+        if ".git" in relative.parts:
+            continue
         if any(part in FORBIDDEN_NAMES or part == "__pycache__" for part in relative.parts):
             findings.append(f"forbidden artifact: {relative}")
             continue
