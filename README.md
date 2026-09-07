@@ -2,7 +2,7 @@
 
 Official implementation of **Edit-VAR**, a training-free and inversion-free video editing framework operating in the discrete token space of a visual autoregressive model.
 
-🔗 [GitHub Repository](https://github.com/chongbozhao3-coder/Edit-VAR)
+🔗 [GitHub Repository](https://github.com/chongbozhao3-coder/Edit-VAR) · 🌐 [Project Page](https://chongbozhao3-coder.github.io/Edit-VAR/)
 
 ## 🔍 Method Overview
 
