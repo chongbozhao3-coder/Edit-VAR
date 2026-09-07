@@ -2,6 +2,8 @@
 
 Official implementation of **Edit-VAR**, a training-free and inversion-free video editing framework operating in the discrete token space of a visual autoregressive model.
 
+🔗 [GitHub Repository](https://github.com/chongbozhao3-coder/Edit-VAR)
+
 ## 🔍 Method Overview
 
 Edit-VAR performs editing through a two-phase coarse-to-fine generation process. In Phase 1, the source video is encoded into discrete token indices, while source-conditioned token probabilities and cross-attention signals are cached. In Phase 2, the source and target distributions are compared to determine whether each token should be preserved or regenerated. The attention signal produces token-wise preservation strengths, and the scale schedule adjusts these strengths over the autoregressive hierarchy; at late scales, dynamic source likelihoods are replaced by a fixed preservation bias, relaxing source constraints so that the target-conditioned model can regenerate fine details more freely. Residual-guided token pruning is provided as an optional inference acceleration mechanism.
