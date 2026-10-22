@@ -820,31 +820,18 @@ const COMPARISON_GROUPS = [
     },
 ];
 
-/*
- * Ablation: Source + Full + variants
- * Place videos in assets/ablation/case_N/
- */
+/* Ablation study */
 const ABLATION_CASES = [
     {
-        title: 'Editing Components (German Shepherd &rarr; Dalmatian)',
+        title: 'Novelty Ablation (German Shepherd &rarr; Dalmatian)',
         cols: 3,
         variants: [
-            { label: 'Source', video: 'assets/ablation/case_1/source.mp4', isSource: true },
-            { label: 'Edit-VAR (Full)', video: 'assets/ablation/case_1/ours.mp4', isOurs: true },
-            { label: 'w/o Attention Guidance', video: 'assets/ablation/case_1/wo_attention.mp4' },
-            { label: 'w/o Scale Envelope', video: 'assets/ablation/case_1/wo_envelope.mp4' },
-            { label: 'w/o Scale-Decoupled Gen.', video: 'assets/ablation/case_1/wo_decoupled.mp4' },
-            { label: 'AREdit-style Uniform γ', video: 'assets/ablation/case_1/uniform_gamma.mp4' },
-        ],
-    },
-    {
-        title: 'Acceleration (Token Pruning)',
-        cols: 4,
-        variants: [
-            { label: 'Source', video: 'assets/ablation/case_2/source.mp4', isSource: true },
-            { label: 'Full (no pruning)', video: 'assets/ablation/case_2/full.mp4' },
-            { label: 'Residual Pruning — Keep 70%', video: 'assets/ablation/case_2/prune_70.mp4' },
-            { label: 'Residual Pruning — Keep 50% (Ours)', video: 'assets/ablation/case_2/prune_50.mp4', isOurs: true },
+            { label: 'Input', video: 'assets/ablation/case_1/input.mp4', isSource: true },
+            { label: 'W/o Re-Anchoring', video: 'assets/ablation/case_1/wo_reanchoring.mp4' },
+            { label: 'Fixed γ', video: 'assets/ablation/case_1/fixed_gamma.mp4' },
+            { label: 'Static Reference', video: 'assets/ablation/case_1/static_reference.mp4' },
+            { label: 'W/o scale decoupling', video: 'assets/ablation/case_1/wo_scale_decoupling.mp4' },
+            { label: 'Full', video: 'assets/ablation/case_1/full.mp4', isOurs: true },
         ],
     },
 ];
